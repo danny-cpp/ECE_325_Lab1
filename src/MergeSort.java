@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Lab 1: Java Basics, Merge Sort and Maven <br />
  * The {@code MergeSort} class
@@ -14,14 +12,49 @@ public class MergeSort {
      * @param arr the integer array to be displayed on the terminal,
      *            useful for debugging.
      */
-
     public static void printArray(int[] arr) {
-        System.out.print("[");
         for (Object i : arr) {
-            System.out.print(i + ", ");
+            System.out.print(i + " ");
         }
-        System.out.println("]");
     }
+
+
+    /**
+     * This function tests any sorting algorithm. It generates a random list of integer, sort it with
+     * the algorithm that being tested, compare that to java built-in sort.
+     *
+     * @param len indicate the length of the testing array
+     *
+     * @return void     Print out sorted array and report if the algorithm sorts successfully or not
+     */
+    public static void sortTester(int len) {
+        int[] numbers = new int[len];
+
+        System.out.println("The random generated array: ");
+        for (int i = 0; i < len; i++) {
+            numbers[i] = (int) (Math.random() * 200);
+            System.out.print(numbers[i] + " ");
+        }
+
+        System.out.println();
+        System.out.println();
+
+        // Debug test here
+        int[] numbers_test = numbers.clone();
+        java.util.Arrays.sort(numbers_test);
+
+        numbers = sort(numbers);
+
+        System.out.println("The array after sorted with MergeSort: ");
+        printArray(numbers);
+
+        // Debug result
+        System.out.println();
+        System.out.println();
+        System.out.print("The algorithm successfully executed: ");
+        System.out.println(java.util.Arrays.equals(numbers, numbers_test));
+    }
+
 
     /**
      * The merge sort procedure
@@ -32,7 +65,6 @@ public class MergeSort {
      *                  Self-refer call will cause variable name to re-reference to
      *                  the new object.
      */
-
     public static int[] sort(int[] numbers) {
         // This is a recursive sorting algorithm, we need a base case that break recursive loop
         // If the array is length 1, it is already sorted
@@ -66,9 +98,9 @@ public class MergeSort {
         return merge(ArrayLeft, ArrayRight);
     }
 
+
     // Now we need to implement our special merge function, which takes in 2 sorted lists to create
     // 1 big sorted list
-
     /**
      * This method is a sub-function for merge sort. It cherry-pick numbers from 2 sorted
      * arrays to form a new big sorted array
@@ -77,7 +109,6 @@ public class MergeSort {
      * @param ArrayRight            Any integer array that already sorted
      * @return BigSortedArray       A sorted integer array that created from the 2 input arrays
      */
-
     public static int[] merge(int[] ArrayLeft, int[] ArrayRight) {
         // We cache the length here for ease of use and reduce computation time
         int left_length = ArrayLeft.length;
@@ -125,31 +156,13 @@ public class MergeSort {
         return BigSortedArray;
     }
 
+
     /**
      * Main entry: test the HeapSort
      * @param args      {@code String[]} Command line arguments
      */
     public static void main(String[] args) {
-        int[] numbers = new int[10];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = (int) (Math.random() * 200);
-            System.out.print(numbers[i] + " ");
-        }
-
-        System.out.println();
-
-        // Debug test here
-        int[] numbers_test = numbers.clone();
-        Arrays.sort(numbers_test);
-
-        numbers = sort(numbers);
-
-        for (int n: numbers)
-            System.out.print(n + " ");
-        System.out.println();
-
-        // Debug result
-        System.out.println(Arrays.equals(numbers, numbers_test));
+        sortTester(20);
     }
 
 }
