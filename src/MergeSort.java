@@ -3,14 +3,16 @@ import java.util.Arrays;
 /**
  * Lab 1: Java Basics, Merge Sort and Maven <br />
  * The {@code MergeSort} class
- * @author <your-name>
+ * @author Danh Nguyen, ID: 1592873
  */
 public class MergeSort {
 
     // Debug tool here
     /**
      * This function print out all object in array
-     * @param arr
+     *
+     * @param arr the integer array to be displayed on the terminal,
+     *            useful for debugging.
      */
 
     public static void printArray(int[] arr) {
@@ -23,8 +25,14 @@ public class MergeSort {
 
     /**
      * The merge sort procedure
+     *
      * @param numbers   {@code int[]} The integer array to be sorted
+     *
+     * @return numbers  Return a <strong>NEW</strong> array that is sorted.
+     *                  Self-refer call will cause variable name to re-reference to
+     *                  the new object.
      */
+
     public static int[] sort(int[] numbers) {
         // This is a recursive sorting algorithm, we need a base case that break recursive loop
         // If the array is length 1, it is already sorted
@@ -49,7 +57,6 @@ public class MergeSort {
             ArrayRight[i] = numbers[i + left_length];
         }
 
-
         // The idea of merge sort is: Assume that we have 2 sorted lists, we merge them to make 1 sorted list
         // so, why don't we merge sort the sub lists, then merge? This is recursive fundamental
         ArrayLeft = sort(ArrayLeft);
@@ -63,10 +70,12 @@ public class MergeSort {
     // 1 big sorted list
 
     /**
-     * This method is a sub-function for merge sort
-     * @param ArrayLeft
-     * @param ArrayRight
-     * @return BigSortedArray
+     * This method is a sub-function for merge sort. It cherry-pick numbers from 2 sorted
+     * arrays to form a new big sorted array
+     *
+     * @param ArrayLeft             Any integer array that already sorted
+     * @param ArrayRight            Any integer array that already sorted
+     * @return BigSortedArray       A sorted integer array that created from the 2 input arrays
      */
 
     public static int[] merge(int[] ArrayLeft, int[] ArrayRight) {
