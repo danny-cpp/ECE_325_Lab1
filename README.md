@@ -3,8 +3,9 @@
 <h2 align="center">Danh Nguyen</h2>
 
 <h3> 1. Introduction </h3>
-  <p> 
-    his project demonstrates how to compile and execute java programs in many methods, along with software project management tool Maven.
+  <p>
+    Remote repository can be found here: <a href="https://github.com/danny-cpp/ECE_325_Lab1">https://github.com/danny-cpp/ECE_325_Lab1</a></br></br>
+    This project demonstrates how to compile and execute java programs in many methods, along with software project management tool Maven.
     The code written for this project is implementation of MergeSort.
   </p>
   
