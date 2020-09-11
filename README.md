@@ -17,7 +17,7 @@
   
  <h3> 3. Acknowledgement </h3>
   <p>
-    Many thanks to Yan He (<a href="github.com/kaka3052">github.com/kaka3052</a>), who has shown me what Maven is and its purpose.
+  Many thanks to <a href="https://www.linkedin.com/in/heyan305/">Yan He</a> (<a href="github.com/kaka3052">github.com/kaka3052</a>), who has shown me what Maven is and its purpose.
   </p>
   
  <h3> 4. License </h3>
