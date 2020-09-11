@@ -162,6 +162,7 @@ public class MergeSort {
      * @param args      {@code String[]} Command line arguments
      */
     public static void main(String[] args) {
+        // Here we test with an array length 20
         sortTester(20);
     }
 
