@@ -27,10 +27,9 @@
     ECE Department of the University of Alberta.
   </p>
   
-  
-  <h4>About the author</h4>
-  
   ___
+  <h3>About the author</h3>
+  
   <p> My name is Danh Nguyen and I'm Computer Engineering student at the University of Alberta with great interest in algorithm and data science. 
       For more information and contact, you can find me at my <a href="https://www.linkedin.com/in/danh-h-nguyen/">Linkedin</a> or email me at <a href="mailto:danh@ualberta.ca">danh@ualberta.ca</a> .
   
