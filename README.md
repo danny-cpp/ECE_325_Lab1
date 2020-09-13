@@ -11,6 +11,7 @@
   
 <h3> 2. Instruction </h3>
   <p>
+    Backup (Google Drive) link for deliverable: <a href="https://drive.google.com/file/d/1U0XKtnPIPBi3EVhIA8LMDuQrhf1-lB4d/view?usp=sharing">here</a></br></br>
     Along with the project is the deliverable video that demonstrates this lab requirement. Futhermore, MergeSort class comes with its own testing tool,
     details within the code itself.
   </p>
